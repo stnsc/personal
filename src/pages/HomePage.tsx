@@ -1,19 +1,33 @@
 import Button from '../components/Button.tsx'
+import { motion } from 'framer-motion'
 
-export default function Home() {
+const pageVariant = {
+  initial: { opacity: 0 },
+  in: { opacity: 1 },
+  out: { opacity: 0 },
+}
+
+const pageDuration = {
+  duration: 0.5,
+}
+
+export default function HomePage() {
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariant}
+      transition={pageDuration}
+    >
       <div className="screen">
         <div className="mainmenu">
-          <img
-            className="logo"
-            src="/longtransparent.png"
-            alt="nelexium logo"
-          />
+          <div className="logo" />
+
           <div className="buttons">
             <Button
               text={'About Me'}
-              href={'#'}
+              href={'/about'}
               icon={'bi bi-person-fill'}
             ></Button>
             <Button
@@ -28,12 +42,12 @@ export default function Home() {
             ></Button>
             <Button
               text={'Personal Projects'}
-              href={'#'}
+              href={'/projects'}
               icon={'bi bi-folder-fill'}
             ></Button>
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   )
 }

@@ -1,11 +1,13 @@
 :root {
     font-family: "Anonymous Pro", monospace;
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
     background: rgb(48, 48, 48);
     background: linear-gradient(225deg, rgba(48, 48, 48, 1) 0%, rgb(2, 73, 51) 100%);
+    color: #cffff1;
     width: 100vh;
     height: 100vh;
 }
@@ -18,17 +20,27 @@ body {
     height: 100vh;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 .mainmenu {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.buttons {
+    display: flex;
+    padding-bottom: 5em;
+}
+
 .button {
     position: relative;
     padding: 1em;
     margin: 1em;
-    color: white;
+
     background: linear-gradient(to top left, rgb(6, 213, 165), rgba(19, 19, 19, 0.5));
     border-radius: 3em;
     font-size: 1.5em;
@@ -36,6 +48,7 @@ body {
     outline: 5px solid rgba(19, 19, 19, 0.5);
     filter: drop-shadow(5px 5px rgba(19, 19, 19, 0.5));
     text-decoration: none;
+    color: #cffff1;
 
     .icon {
         font-size: 1em;
@@ -47,4 +60,47 @@ body {
 .logo {
     margin: 1em 1em 4em;
     filter: drop-shadow(5px 5px rgba(19, 19, 19, 0.5));
+    width: 1301px;
+    height: 134px;
+    background-image: url("/public/longtransparent.png");
+    background-size: cover;
+    background-position: center;
 }
+
+
+@media (max-width: 1329px) {
+    .logo {
+        margin: 1em 1em 4em;
+        filter: drop-shadow(5px 5px rgba(19, 19, 19, 0.5));
+        width: 300px;
+        height: 300px;
+        background-image: url("/public/watermark.png");
+        background-position: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1em);
+
+
+    .navbar-back {
+        font-size: 3em;
+        color: white;
+        padding: .5em;
+    }
+}
+
+
+.contents {
+    margin-top: 10em;
+}
+
