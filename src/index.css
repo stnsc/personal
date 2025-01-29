@@ -78,3 +78,43 @@ body{
     padding: .5em 1em;
   }
 }
+
+.data-entry{
+  margin: .5em 0; 
+  padding: 1em;
+  border-radius: 3em;
+
+  background-color: #00000031;
+  backdrop-filter: blur(2px); 
+
+  h2{
+    font-family: "Krona One", serif;
+  }
+}
+
+.data-hr{
+  height: .5em;
+  background: white;
+  background: linear-gradient(to right, white 0%, var(--col4) 100%);
+  margin-left: .5em;
+  flex-grow: 1;
+}
+
+
+.data-link{
+  background-color: var(--col4);
+  color: var(--col2);
+  font-family: "Krona One", serif;
+  padding: .25em .5em;
+  border-radius: 5em;
+  transform: translate(-1%, 0);
+}
+
+.data-desc{
+  margin-left: 1.5em;
+  margin-right: 5em;
+
+  .data-tech{
+    color: var(--col5);
+  }
+}
