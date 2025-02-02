@@ -7,7 +7,7 @@ function Download() {
                 <button type="button" className="button-download ">
                     <a
                         target="_blank"
-                        href="../../public/CV - Stanescu Vladut.pdf"
+                        href="/CV - Stanescu Vladut.pdf"
                         className="flex flex-row"
                     >
                         <DocumentArrowDownIcon className="size-6" />
