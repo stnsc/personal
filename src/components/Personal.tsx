@@ -50,7 +50,7 @@ function Personal() {
                 "Documenting the whole design through implementation process.",
             technologies:
                 "Figma, Vite, React, TypeScript, TailwindCSS, Anime.JS, Hosted on Vercel",
-            url: "",
+            url: "https://github.com/stnsc/personal",
         },
     ])
 
