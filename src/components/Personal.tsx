@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {
     ChevronDoubleRightIcon,
     ArrowTopRightOnSquareIcon,
     CodeBracketIcon,
 } from "@heroicons/react/24/solid"
+import anime from "animejs"
 
 interface PersonalProps {
     name: string
@@ -26,15 +27,14 @@ function Personal() {
             description:
                 "Bachelors Final Project, a website system for managing various car service shops.",
             technologies:
-                "React, TypeScript, Bootstrap, Express.JS, PostgreSQL",
+                "React, TypeScript, Bootstrap, Express.JS, Framer Motion, PostgreSQL",
             url: "",
         },
         {
-            name: "PRINTABLES",
+            name: "WEATHER APPLICATION",
             description:
-                "Personal Project in development, a website based on selling 3D printed gadgets.",
-            technologies:
-                "Figma, React, TypeScript, Tailwind, Vercel for hosting",
+                "Personal Project for displaying weather data from any city on earth using OpenWeatherAPI.",
+            technologies: "React, TypeScript, Framer Motion, Tailwind",
             url: "",
         },
         {
@@ -48,10 +48,22 @@ function Personal() {
             name: "THIS WEBSITE!",
             description:
                 "Documenting the whole design through implementation process.",
-            technologies: "Figma, Vite, React, TailwindCSS",
+            technologies:
+                "Figma, Vite, React, TypeScript, TailwindCSS, Anime.JS, Hosted on Vercel",
             url: "",
         },
     ])
+
+    useEffect(() => {
+        anime({
+            targets: ".data-entry",
+            opacity: [0, 1],
+            translateX: [50, 0],
+            duration: 300,
+            easing: "easeInOutCirc",
+            delay: anime.stagger(50),
+        })
+    }, [data])
 
     return (
         <div className="container max-w-4xl mx-auto flex flex-col items-start">

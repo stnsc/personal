@@ -17,11 +17,17 @@ function Background() {
 
     return (
         <div className="background_container">
-            <div className="background"></div>
+            <div
+                className="background"
+                style={{
+                    backgroundPosition: `${cursorPos.x * 0.02}px ${cursorPos.y * 0.02}px`,
+                }}
+            ></div>
             <div
                 className="background_bright"
                 style={{
-                    maskImage: `radial-gradient(circle 10vw at ${cursorPos.x}px ${cursorPos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)`,
+                    backgroundPosition: `${cursorPos.x * 0.02}px ${cursorPos.y * 0.02}px`,
+                    maskImage: `radial-gradient(circle 15vw at ${cursorPos.x}px ${cursorPos.y}px, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%)`,
                 }}
             ></div>
         </div>
