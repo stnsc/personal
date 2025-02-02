@@ -20,7 +20,7 @@ function Personal() {
             description:
                 "Work-in-progress, a robot for the social platform Discord, of general use, focused on a video game for API calls.",
             technologies: "Javascript, Koyeb for 24/7 Hosting",
-            url: "",
+            url: "https://github.com/nelexium/NELENITE",
         },
         {
             name: "AUTO-SERVICE",
@@ -28,21 +28,21 @@ function Personal() {
                 "Bachelors Final Project, a website system for managing various car service shops.",
             technologies:
                 "React, TypeScript, Bootstrap, Express.JS, Framer Motion, PostgreSQL",
-            url: "",
+            url: "https://github.com/stnsc/AutoService-Website/tree/main",
         },
         {
             name: "WEATHER APPLICATION",
             description:
                 "Personal Project for displaying weather data from any city on earth using OpenWeatherAPI.",
             technologies: "React, TypeScript, Framer Motion, Tailwind",
-            url: "",
+            url: "https://github.com/stnsc/weather-app",
         },
         {
             name: "DIGITAL HOURGLASS",
             description:
                 "Master’s Project, a robotics prototype that simulates sand falling by using LED’s and a Gyroscope sensor, plus Bluetooth for IoT purposes.",
             technologies: "Arduino, Virtuino for IoT",
-            url: "",
+            url: "https://drive.google.com/file/d/1CgLry9wnZ4XLwn3fiN-dvkE1GNhrcOEd/view",
         },
         {
             name: "THIS WEBSITE!",
@@ -77,7 +77,7 @@ function Personal() {
                         </h2>
                         <div className="data-hr"></div>
                         <div className="data-link flex flex-row">
-                            <a href="#" className="flex flex-row gap-2">
+                            <a href={data.url} className="flex flex-row gap-2">
                                 LINK{" "}
                                 <ArrowTopRightOnSquareIcon className="size-6" />
                             </a>
